@@ -1,0 +1,28 @@
+package mockinterview.mockinterview__3;
+
+import java.util.Scanner;
+
+public class ArrayProblem {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		
+		System.out.println("Enter the lenght on the Array (n): ");
+		int n = sc.nextInt();
+		
+		int  []array=new Array[n];
+		System.out.println("Enter the Element :  ");
+		
+		for(int i=0;i<n;i++)
+		{
+			array[i]=sc.nextInt();
+		}
+		
+		for(int i =0;i<array.length;i++) {
+			
+			int lastNumber=array[i]%10;
+			int firstNumber=array[i]/10;
+			int sum= firstNumber+lastNumber;
+			System.out.print(sum +" ");
+		}
+	}
+}
