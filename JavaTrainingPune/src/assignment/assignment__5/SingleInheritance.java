@@ -1,4 +1,4 @@
-package assignment.assignment5;
+package assignment.assignment__5;
 
 // Parent class
 class Parent {
