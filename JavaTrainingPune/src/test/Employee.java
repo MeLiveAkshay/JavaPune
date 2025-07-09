@@ -63,9 +63,18 @@ public class Employee {
            "}";
         }
 
+
     @Override
-    public boolean equals(Object obj) {
-        
-        return super.equals(obj);
+    public boolean equals(Object demo) {
+        if (demo instanceof Employee) {
+            Employee employee=(Employee) demo;//downCasting
+            if(this.id == employee.id && this.name.equals(employee.name) && this.salary == employee.salary )
+            {
+                return true;
+            }
+           
+        }
+         return false;
+
     }
 }
