@@ -1,7 +1,7 @@
 package test; // Package declaration - organizes classes into namespaces
 
 // Employee class definition
-public class Employee {
+public class Employee  implements Cloneable{
 
     // Private fields (data members) - encapsulated using private access modifier
     private int id;           // Employee ID
@@ -76,5 +76,13 @@ public class Employee {
         }
          return false;
 
+    }
+
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Employee employee=new Employee(101, "Neha", 150000f);
+        System.out.println("employee : "+ employee);
+
+        Employee employee2=(Employee) employee.clone();
+        System.out.println(employee2);
     }
 }
