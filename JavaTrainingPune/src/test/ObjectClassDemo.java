@@ -12,6 +12,11 @@ public class ObjectClassDemo {
         System.out.println("\nemployee : " +employee2.toString());
         //System.out.println(employee==employee2);
         System.out.println("\n employee.equals(employee2) :"+employee.equals(employee2));//false
+        
+        
+        
+        Employee employee3=employee.clone();
+        System.out.println("Clone of employee : employee3 : "+employee3);
 
     }
 }

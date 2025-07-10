@@ -75,9 +75,21 @@ public class Employee  implements Cloneable{
            
         }
          return false;
-
+         	
     }
-
+    @Override
+    protected Employee clone()
+    {
+    	return new Employee(this.id,this.name,this.salary);
+    }
+    
+    
+    @Override
+    protected void finalize()
+    {
+    	System.out.println("Inside finalize () Method of Employee class !!!");
+    }
+/*
     public static void main(String[] args) throws CloneNotSupportedException {
         Employee employee=new Employee(101, "Neha", 150000f);
         System.out.println("employee : "+ employee);
@@ -85,4 +97,5 @@ public class Employee  implements Cloneable{
         Employee employee2=(Employee) employee.clone();
         System.out.println(employee2);
     }
+    */
 }
