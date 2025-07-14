@@ -12,8 +12,18 @@ public class DivisionDemo {
             int num2 = Integer.parseInt(args[1]);
             System.out.println("Second Number is : " + num2);	
             
-            // Perform division and display the result
-            System.out.println("Division Result of " + num1 + " and " + num2 + " is : " + (num1 / num2));
+            try {
+				// Perform division and display the result
+				System.out.println("Division Result of " + num1 + " and " + num2 + " is : " + (num1 / num2));
+			} catch (ArrayIndexOutOfBoundsException e) {
+				// TODO Auto-generated catch block
+				
+				System.out.println("Exception in the Application : "+e.getMessage());
+			}
+            finally {
+				System.out.println("Inner Finally Block");
+			}
+            System.out.println("Hello");
         } 
         // This block handles the case where inputs are not valid integers
         catch (NumberFormatException exception) {
@@ -27,7 +37,10 @@ public class DivisionDemo {
         catch (ArithmeticException exception) {
             System.out.println("Division by zero NOT Possible !!! " + exception.getMessage());
         }
-
+        
+        finally {
+			System.out.println("Finally Block Executes Alaways");
+		}
         // This statement runs regardless of whether an exception occurs or not
         System.out.println("End of the application");
     }
