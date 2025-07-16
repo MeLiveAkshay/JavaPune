@@ -8,8 +8,8 @@ public class FileWritingDemo {
 	public static void main(String[] args) {
 		FileOutputStream fileOutputStream=null;
 		try {
-			fileOutputStream=new FileOutputStream("D:\\Java IDE\\JavaTrainingPune\\src\\File\\message.text");
-			String msg="Hello !!! This is file writing Demo !!!!";
+			fileOutputStream=new FileOutputStream("D:\\Java IDE\\JavaTrainingPune\\src\\File\\message.text",true);
+			String msg="Wellcome Every One ";
 			fileOutputStream.write(msg.getBytes());
 			System.out.println("Writing Message into file");
 			
