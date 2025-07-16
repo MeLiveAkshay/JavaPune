@@ -1,51 +1,63 @@
-package input_output;
+package input_output;  // Declares the package
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * This program demonstrates:
+ * - Taking user input from the console using BufferedReader.
+ * - Writing the input message to a file using FileOutputStream.
+ * - Using exception handling and proper resource cleanup.
+ */
 public class UserInputDemo {
     public static void main(String[] args) {
-    	FileOutputStream fileOutputStream=null;
-    	
+        FileOutputStream fileOutputStream = null;
+        BufferedReader bufferedReader = null;
+
         try {
-            // Create an InputStreamReader to read bytes from the console and decode them into characters
+            // Create an InputStreamReader to read bytes from console and decode into characters
             InputStreamReader inputStreamReader = new InputStreamReader(System.in);
 
-            // Wrap the InputStreamReader with a BufferedReader for efficient reading of text
-            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            // Wrap InputStreamReader with BufferedReader for efficient reading
+            bufferedReader = new BufferedReader(inputStreamReader);
 
             // Prompt the user to enter a message
             System.out.println("Enter the Message");
 
-            // Read a line of text entered by the user
+            // Read one line of input from the console
             String msg = bufferedReader.readLine();
 
-            // Display the entered message
+            // Display the entered message on the console
             System.out.println("Message is : " + msg);
-            fileOutputStream=new FileOutputStream("D:\\Java IDE\\JavaTrainingPune\\src\\File\\message.text", true);
+
+            // Create FileOutputStream to write the message to a file (append mode)
+            fileOutputStream = new FileOutputStream("D:\\Java IDE\\JavaTrainingPune\\src\\File\\message.text", true);
+
+            // Convert the string message to bytes and write to file
             fileOutputStream.write(msg.getBytes());
-            System.out.println("Writing the massage in the file (progress done)......... ");
+
+            // Write a newline character (for better readability in the file)
+            fileOutputStream.write(System.lineSeparator().getBytes());
+
+            System.out.println("Writing the message to the file (done).........");
+
         } catch (IOException e) {
-            // Print the stack trace if an I/O error occurs
+            // Handle all input/output exceptions
             e.printStackTrace();
-        }
-        finally {
-        try {
-        	if(fileOutputStream != null)fileOutputStream.close();
-        }
-        catch(IOException exception) {
-        	exception.printStackTrace();
-        }
+        } finally {
+            // Ensure both streams are closed to release system resources
+            try {
+                if (fileOutputStream != null) {
+                    fileOutputStream.close();
+                }
+                if (bufferedReader != null) {
+                    bufferedReader.close();
+                }
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            }
         }
     }
 }
-
-/*
-This program demonstrates how to take user input in Java using BufferedReader.
-- It reads a line of text from the console.
-- BufferedReader provides efficient reading of characters, arrays, and lines.
-- InputStreamReader bridges byte streams (System.in) to character streams.
-- Exception handling ensures the program deals gracefully with I/O errors.
-*/
