@@ -14,12 +14,12 @@ public class FileReaderDemo {
 
         // Check if the file exists before trying to read it
         if (file.exists()) {
-            System.out.println("It exists");
-
+            System.out.println("It Exists");
+            FileInputStream fileInputStream=null;
             // Try-catch block only for file reading logic
             try {
                 // Create a FileInputStream to read the file content as bytes
-                FileInputStream fileInputStream = new FileInputStream(file);
+                 fileInputStream = new FileInputStream(file);
 
                 int i = 0; // Variable to hold each byte read
 
@@ -38,10 +38,22 @@ public class FileReaderDemo {
                 // Handles input/output errors during reading
                 exception.printStackTrace();
             }
+            finally
+            {
+				try 
+				{
+					if(fileInputStream !=null) fileInputStream.close();
+				}
+					
+				catch(IOException ioException)
+				{
+					ioException.printStackTrace();
+				}
+			}
 
         } else {
             // If the file does not exist, print an error message
-            System.err.println("File does not exist!!!");
+            System.err.println("File Does Not Exist!!!");
         }
     }
 }
