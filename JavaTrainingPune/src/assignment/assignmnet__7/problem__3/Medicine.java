@@ -1,5 +1,16 @@
 package assignment.assignmnet__7.problem__3;
 
-public abstract class Medicine {
-	 	public abstract void displayLabel ();
+class Medicine {
+    String name;
+    String address;
+
+    public Medicine(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    public void displayLabel() {
+        System.out.println("Medicine Company: " + name);
+        System.out.println("Address: " + address);
+    }
 }
