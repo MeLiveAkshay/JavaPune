@@ -14,6 +14,9 @@ public class FileReaederExample {
 		FileReader fileReader=null;
 		BufferedReader bufferedReader=null;
 		
+		/*
+		 * file check	
+		 */
 		if(file.exists()) {
 		try {
 		 fileReader=new FileReader(file);
