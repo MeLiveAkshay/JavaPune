@@ -16,7 +16,7 @@ public class FileReaderDemo {
     public static void main(String[] args) {
 
         // Create a File object with the full path of the file to read
-        File file = new File("D:\\Java IDE\\JavaTrainingPune\\src\\File\\demo.text");
+        File file = new File("D:\\Java IDE\\JavaTrainingPune\\src\\File\\demo.txt");
 
         // Check if the file actually exists
         if (file.exists()) {

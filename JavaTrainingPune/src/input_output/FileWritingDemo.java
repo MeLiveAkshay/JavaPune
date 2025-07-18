@@ -19,7 +19,7 @@ public class FileWritingDemo {
         FileOutputStream fileOutputStream = null;
         try {
             // Open the file in append mode (true), meaning new data will be added to the end
-            fileOutputStream = new FileOutputStream("D:\\Java IDE\\JavaTrainingPune\\src\\File\\message.text", true);
+            fileOutputStream = new FileOutputStream("D:\\Java IDE\\JavaTrainingPune\\src\\File\\message.txt", true);
 
             String msg = "Wellcome Every One ";  // Message to be written
 
