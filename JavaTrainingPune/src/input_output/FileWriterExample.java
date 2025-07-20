@@ -14,8 +14,7 @@ public class FileWriterExample {
         String msg=scanner.nextLine();
          writer=new FileWriter("D:\\Java IDE\\JavaTrainingPune\\src\\File\\fileWriter.txt",true);
         writer.write("\n"+msg);
-        System.out.println("Writing the msg on the file ..........."
-        		+msg);
+        System.out.println("Writing the msg on the file ..........."+msg);
     	}
     	catch(IOException exception) {
     		exception.printStackTrace();
