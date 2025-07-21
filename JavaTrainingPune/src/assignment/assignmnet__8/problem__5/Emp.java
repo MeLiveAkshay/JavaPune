@@ -22,6 +22,7 @@ public class Emp
 			this.basic = basic;
 			
 			
+		
 			
 			calculateHRA();
 		}
