@@ -11,7 +11,7 @@ public class MyThread extends Thread
 	//parameterized constructor
 	public MyThread(String string)
 	{
-		super(string);
+		super(string); 
 	}
 
 	public void run()

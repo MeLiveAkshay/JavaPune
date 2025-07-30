@@ -1,0 +1,6 @@
+java 5 Feature:
+
+1.Auto-boxing/Auto-Unboxing
+2. Generic
+3.Covarient return type (Regarding Method Overriding)
+5. Enum 
