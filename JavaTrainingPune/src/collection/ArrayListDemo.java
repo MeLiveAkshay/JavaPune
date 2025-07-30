@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ArrayListDemo
 {
    
-    @SuppressWarnings({ "unchecked", "removal", "unchecked", "unchecked", "unchecked" })
+    @SuppressWarnings({ "unchecked", "removal" })
 	public static void main(String[] args)
     {
         // Creating a raw ArrayList (no generics used, allows any type of object)
@@ -66,7 +66,8 @@ public class ArrayListDemo
 
        
         
-        @SuppressWarnings({ "unused", "unused" })
+
+        
 		ArrayList<Employee> employees=new ArrayList<Employee>();
         
         arrayList.add(new Employee(101,"Nisha",150000));
