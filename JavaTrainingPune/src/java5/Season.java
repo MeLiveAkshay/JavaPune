@@ -17,7 +17,8 @@ public enum Season {
     }
 
     // A private method
-    private void display() {
+    @SuppressWarnings("unused")
+	private void display() {
         System.out.println("Season: " + this.name() + ", Number: " + number);
     }
 }

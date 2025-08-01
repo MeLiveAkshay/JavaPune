@@ -1,6 +1,7 @@
 package exception;  // Declares the package name
 
 // Custom exception class extending the built-in Exception class
+@SuppressWarnings("serial")
 public class LowSalaryException extends Exception {
 
     // Constructor that takes a message and passes it to the parent Exception class

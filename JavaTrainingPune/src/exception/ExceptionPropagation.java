@@ -1,8 +1,10 @@
 package exception;
 
 public class ExceptionPropagation {
+	@SuppressWarnings("unused")
 	void method3() {
-        int result = 5 / 0;  // ArithmeticException occurs
+        
+		int result = 5 / 0;  // ArithmeticException occurs
     }
 
     void method2() {

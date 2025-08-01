@@ -3,6 +3,7 @@ package java5;
 import java.util.Scanner;
 
 public class SeasonMain {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
 		

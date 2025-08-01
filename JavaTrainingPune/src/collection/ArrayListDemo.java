@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ArrayListDemo
 {
    
-    @SuppressWarnings({ "unchecked", "removal" })
+    @SuppressWarnings({ "unchecked", "removal", "unused" })
 	public static void main(String[] args)
     {
         // Creating a raw ArrayList (no generics used, allows any type of object)
